@@ -48,19 +48,19 @@ export class ProductService {
     }))
   }
 
-  remove (id) {
-    return this.http.delete(`${environment.fbDbUrl}/products/${id}.json`)
+  remove(id) {
+    return this.http.delete(`${environment.fbDbUrl}/products/${id}.json`);
   }
 
   update(product: Product) {
-    return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product)
+    return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product);
   }
 
-  setType (type) {
-    this.type = type
+  setType(type) {
+    this.type = type;
   }
 
-  addProduct (product) {
-    this.cartProducts.push(product)
+  addProduct(product) {
+    this.cartProducts.push(product);
   }
 }
